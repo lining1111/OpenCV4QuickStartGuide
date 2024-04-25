@@ -13,20 +13,26 @@ target_link_libraries(OpenCV4QuickStartGuide ${LIBS})
 
 
 ##chapter1
-
-add_executable(chapter1 chapter1/chapter1.cpp)
-target_link_libraries(chapter1 ${LIBS})
-
+add_subdirectory(chapter1)
 ##chapter2
-
-add_executable(VideoCapture chapter2/VideoCapture.cpp)
-target_link_libraries(VideoCapture ${LIBS})
-
-add_executable(ImgWriter chapter2/ImgWriter.cpp)
-target_link_libraries(ImgWriter ${LIBS})
-
-add_executable(VideoWriter chapter2/VideoWriter.cpp)
-target_link_libraries(VideoWriter ${LIBS})
-
-add_executable(myXMLandYMAL chapter2/myXMLandYMAL.cpp)
-target_link_libraries(myXMLandYMAL ${LIBS})
+add_subdirectory(chapter2)
+##chapter3
+add_subdirectory(chapter3)
+##chapter4
+add_subdirectory(chapter4)
+##chapter5
+add_subdirectory(chapter5)
+##chapter6
+add_subdirectory(chapter6)
+##chapter7
+add_subdirectory(chapter7)
+##chapter8
+add_subdirectory(chapter8)
+##chapter9
+add_subdirectory(chapter9)
+##chapter10
+add_subdirectory(chapter10)
+##chapter11
+add_subdirectory(chapter11)
+##chapter12
+add_subdirectory(chapter12)

@@ -4,6 +4,8 @@
 using namespace cv;
 using namespace std;
 
+const string basePath = "data/chapter2/";
+
 int main(int argc, char **argv) {
     Mat img;
     VideoCapture video(0);  //使用某个摄像头
@@ -31,7 +33,7 @@ int main(int argc, char **argv) {
     int codec = VideoWriter::fourcc('M', 'J', 'P', 'G');  // 选择编码格式
 
     double fps = 25.0;  //设置视频帧率
-    string filename = "data/chapter2/live.avi";  //保存的视频文件名称
+    string filename = basePath + "live.avi";  //保存的视频文件名称
     writer.open(filename, codec, fps, img.size(), isColor);  //创建保存视频文件的视频流
 
     //判断视频流是否创建成功

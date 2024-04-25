@@ -8,8 +8,10 @@
 using namespace std;
 using namespace cv;
 
+const string basePath = "data/chapter2/";
+
 int main(int argc, char *argv[]) {
-    string path = R"(data/chapter2/cup.mp4)";
+    string path = basePath + "cup.mp4";
     struct stat statbuf;
     if (stat(path.c_str(), &statbuf) == 0) {
         cout << "文件大小=" << statbuf.st_size << endl;

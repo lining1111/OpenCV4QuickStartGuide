@@ -8,21 +8,20 @@
 using namespace std;
 using namespace cv;
 
-void AlphaMat(Mat &mat)
-{
+void AlphaMat(Mat &mat) {
     CV_Assert(mat.channels() == 4);
-    for (int i = 0; i < mat.rows; ++i)
-    {
-        for (int j = 0; j < mat.cols; ++j)
-        {
-            Vec4b& bgra = mat.at<Vec4b>(i, j);
+    for (int i = 0; i < mat.rows; ++i) {
+        for (int j = 0; j < mat.cols; ++j) {
+            Vec4b &bgra = mat.at<Vec4b>(i, j);
             bgra[0] = UCHAR_MAX;  // 蓝色通道
-            bgra[1] = saturate_cast<uchar>((float(mat.cols - j)) / ((float)mat.cols) * UCHAR_MAX);  // 绿色通道
-            bgra[2] = saturate_cast<uchar>((float(mat.rows - i)) / ((float)mat.rows) * UCHAR_MAX);  // 红色通道
+            bgra[1] = saturate_cast<uchar>((float(mat.cols - j)) / ((float) mat.cols) * UCHAR_MAX);  // 绿色通道
+            bgra[2] = saturate_cast<uchar>((float(mat.rows - i)) / ((float) mat.rows) * UCHAR_MAX);  // 红色通道
             bgra[3] = saturate_cast<uchar>(0.5 * (bgra[1] + bgra[2]));  // Alpha通道
         }
     }
 }
+
+const string basePath = "data/chapter2/";
 
 int main(int argc, char *argv[]) {
     // Create mat with alpha channel
@@ -31,9 +30,8 @@ int main(int argc, char *argv[]) {
     vector<int> compression_params;
     compression_params.push_back(IMWRITE_PNG_COMPRESSION);  //PNG格式图像压缩标志
     compression_params.push_back(9);  //设置最高压缩质量
-    bool result = imwrite("data/chapter2/alpha.png", mat, compression_params);
-    if (!result)
-    {
+    bool result = imwrite(basePath + "alpha.png", mat, compression_params);
+    if (!result) {
         cout << "保存成PNG格式图像失败" << endl;
         return -1;
     }
