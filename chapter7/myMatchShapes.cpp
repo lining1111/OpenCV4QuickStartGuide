@@ -26,7 +26,7 @@ int main() {
         return -1;
     }
     resize(img_B, img_B, Size(), 0.5, 0.5);
-    imwrite("B.png", img_B);
+    imwrite(basePath+"B_.png", img_B);
     imshow("B", img_B);
 
     // 轮廓提取

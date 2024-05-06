@@ -14,7 +14,7 @@ int main() {
     }
     Point2f src_points[4];
     Point2f dst_points[4];
-    //通过Image Watch查看的二维码四个角点坐标
+    //通过Image Watch查看的二维码四个角点坐标 OpenCV Image Viewer
     src_points[0] = Point2f(94.0, 374.0);
     src_points[1] = Point2f(507.0, 380.0);
     src_points[2] = Point2f(1.0, 623.0);

@@ -7,17 +7,17 @@ using namespace cv;
 Mat img, imgPoint; //全局的图像
 Point prePoint; //前一时刻鼠标的坐标，用于绘制直线
 void mouse(int event, int x, int y, int flags, void *) {
-    if (event == EVENT_RBUTTONDOWN) //单击右键
-    {
+    //单击右键
+    if (event == EVENT_RBUTTONDOWN) {
         cout << "点击鼠标左键才可以绘制轨迹" << endl;
     }
-    if (event == EVENT_LBUTTONDOWN) //单击左键，输出坐标
-    {
+    //单击左键，输出坐标
+    if (event == EVENT_LBUTTONDOWN) {
         prePoint = Point(x, y);
         cout << "轨迹起始坐标" << prePoint << endl;
     }
-    if (event == EVENT_MOUSEMOVE && (flags & EVENT_FLAG_LBUTTON)) //鼠标按住左键移动第 3 章 图像基本操作
-    {
+    //鼠标按住左键移动第 3 章 图像基本操作
+    if (event == EVENT_MOUSEMOVE && (flags & EVENT_FLAG_LBUTTON)) {
         //通过改变图像像素显示鼠标移动轨迹
         imgPoint.at<Vec3b>(y, x) = Vec3b(0, 0, 255);
         imgPoint.at<Vec3b>(y, x - 1) = Vec3b(0, 0, 255);
