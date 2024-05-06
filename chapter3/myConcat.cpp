@@ -26,10 +26,10 @@ int main() {
     cout << "多个图像横向连接：" << endl << hC << endl;
 
     //读取4个子图像，00表示左上角、01表示右上角、10表示左下角、11表示右下角
-    Mat img00 = imread(basePath + "lena00.png");
-    Mat img01 = imread(basePath + "lena01.png");
-    Mat img10 = imread(basePath + "lena10.png");
-    Mat img11 = imread(basePath + "lena11.png");
+    Mat img00 = imread(basePath + "lena00.jpg");
+    Mat img01 = imread(basePath + "lena01.jpg");
+    Mat img10 = imread(basePath + "lena10.jpg");
+    Mat img11 = imread(basePath + "lena11.jpg");
     if (img00.empty() || img01.empty() || img10.empty() || img11.empty()) {
         cout << "请确认图像文件名称是否正确" << endl;
         return -1;
