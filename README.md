@@ -103,7 +103,7 @@
     
     距的计算：几何距、中心距、Hu距
 
-    二维码检测，因为是apt安装的opencv,所以没有qrcode模块，需要自己安装。可以通过libzbar代替
+    二维码检测，因为是apt安装的opencv,所以没有qrcode模块，需要自己安装,通过libzbar代替,修改了源码
 
 ## chapter8
 

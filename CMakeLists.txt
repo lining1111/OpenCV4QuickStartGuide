@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(OpenCV REQUIRED)
 
-set(LIBS m pthread
+set(LIBS m pthread zbar
         ${OpenCV_LIBS})
 
 add_executable(OpenCV4QuickStartGuide main.cpp)
