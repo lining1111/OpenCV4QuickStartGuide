@@ -16,7 +16,7 @@ int main() {
     }
     Mat result_5, result_9;  //存放不含噪声滤波结果，后面数字代表滤波器尺寸
     Mat result_5gauss, result_9gauss;  //存放含有高斯噪声滤波结果，后面数字代表滤波器尺寸
-    Mat result_5salt, result_9salt;  ////存放含有椒盐噪声滤波结果，后面数字代表滤波器尺寸
+    Mat result_5salt, result_9salt;  //存放含有椒盐噪声滤波结果，后面数字代表滤波器尺寸
     //调用均值滤波函数blur()进行滤波
     GaussianBlur(equalLena, result_5, Size(5, 5), 10, 20);
     GaussianBlur(equalLena, result_9, Size(9, 9), 10, 20);
