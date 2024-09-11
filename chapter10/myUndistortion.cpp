@@ -48,7 +48,7 @@ int main() {
     string imageName;
     ifstream fin(basePath + "calibdata.txt");
     while (getline(fin, imageName)) {
-        Mat img = imread(imageName);
+        Mat img = imread(basePath + imageName);
         imgs.push_back(img);
     }
 
@@ -64,10 +64,10 @@ int main() {
     imageSize.height = imgs[0].rows;
 
     //使用initUndistortRectifyMap()函数和remap()函数校正图像
-    initUndistAndRemap(imgs, cameraMatrix, distCoeffs, imageSize, undistImgs);
+//    initUndistAndRemap(imgs, cameraMatrix, distCoeffs, imageSize, undistImgs);
 
     //用undistort()函数直接计算校正图像，下一行代码取消注释即可
-    //undist(imgs, cameraMatrix, distCoeffs, undistImgs);
+    undist(imgs, cameraMatrix, distCoeffs, undistImgs);
 
     //显示校正前后的图像
     for (int i = 0; i < imgs.size(); i++) {

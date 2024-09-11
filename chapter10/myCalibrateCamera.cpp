@@ -14,12 +14,12 @@ int main() {
     string imageName;
     ifstream fin(basePath + "calibdata.txt");
     while (getline(fin, imageName)) {
-        Mat img = imread(imageName);
+        Mat img = imread(basePath + imageName);
         imgs.push_back(img);
     }
 
     Size board_size = Size(9, 6);  //方格标定板内角点数目（行，列）
-    vector<vector<Point2f>> imgsPoints;
+    vector<vector<Point2f>> imgsPoints;//多个图 的 定点坐标集
     for (int i = 0; i < imgs.size(); i++) {
         Mat img1 = imgs[i];
         Mat gray1;

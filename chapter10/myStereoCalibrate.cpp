@@ -30,8 +30,8 @@ int main() {
     ifstream finL(basePath + "steroCalibDataL.txt");
     ifstream finR(basePath + "steroCalibDataR.txt");
     while (getline(finL, imgLName) && getline(finR, imgRName)) {
-        Mat imgL = imread(imgLName);
-        Mat imgR = imread(imgRName);
+        Mat imgL = imread(basePath + imgLName);
+        Mat imgR = imread(basePath + imgRName);
         if (!imgL.data && !imgR.data) {
             cout << "请确是否输入正确的图像文件" << endl;
             return -1;
