@@ -7,6 +7,8 @@
     通阅本书，了解基本的Opencv4操作，再结合实际项目中的算法模型，完成提升是一个不错的方向。
 
     作者在B站上的视频地址 https://www.bilibili.com/video/BV1jk4y1i7gN
+    
+    在跟随视频进行柱拐式的学习后，可以参照官网的例程进行更规范的学习(4.2.0是本机的opencv版本) https://docs.opencv.org/4.2.0/d9/df8/tutorial_root.html
 
 ## chapter1
 
